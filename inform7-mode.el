@@ -9,6 +9,7 @@
 
 (defvar inform7-mode-map
   (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "RET") 'newline-and-indent)
     (define-key map "\C-j" 'newline-and-indent)
     map)
   "Keymap for inform7 major mode")
