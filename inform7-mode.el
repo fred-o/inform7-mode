@@ -22,14 +22,17 @@
 
 (defconst inform7-font-lock-keywords
   `(( ,(regexp-opt '("Include" "Use" "let" "say" "if" "otherwise") 'words) . font-lock-keyword-face)
-    ("\\[.*\\]" . font-lock-comment-face)
-    ("\\(\\(?:Book\\|Chapter\\|Part\\|Section\\|Volume\\) - .*\\)" 0 'inform7-heading-face t)
-    ("\".*\\(\\[.*?\\]\\).*\"" 1 font-lock-variable-name-face t))
+    ("^\\(\\(?:Book\\|Chapter\\|Part\\|Section\\|Volume\\) - .*\\)" 0 'inform7-heading-face t)
+    (".\\(\\[.*?\\]\\)." 0 font-lock-variable-name-face t)
+    )
   "Highlighting expressions for inform7-mode")
 
 (define-derived-mode inform7-mode sws-mode "Inform7"
   "Major mode for editing inform 7 story files."
   (visual-line-mode)
   (set (make-local-variable 'font-lock-defaults) '(inform7-font-lock-keywords nil t)))
+
+(modify-syntax-entry ?\[ "<]" inform7-mode-syntax-table)
+(modify-syntax-entry ?\] ">[" inform7-mode-syntax-table)
 
 (provide 'inform7-mode)
