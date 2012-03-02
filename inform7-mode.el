@@ -1,3 +1,5 @@
+(require 'sws-mode)
+
 (defface inform7-heading-face
   '((t (:inherit font-lock-preprocessor-face :weight bold :height 1.2)))
   "Face for Inform 7 headings"
@@ -22,7 +24,7 @@
 
 (defconst inform7-font-lock-keywords
   `(( ,(regexp-opt '("Include" "Use" "let" "say" "if" "otherwise") 'words) . font-lock-keyword-face)
-    ("^\\(\\(?:Book\\|Chapter\\|Part\\|Section\\|Volume\\) - .*\\)" 0 'inform7-heading-face t)
+    ("^\\(\\(?:Book\\|Chapter\\|Part\\|Section\\|Volume\\) - .*\\)" . 'inform7-heading-face)
     (".\\(\\[.*?\\]\\)." 0 font-lock-variable-name-face t)
     )
   "Highlighting expressions for inform7-mode")
