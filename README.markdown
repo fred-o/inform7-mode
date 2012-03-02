@@ -11,9 +11,11 @@ development.
  [inform7-mode.el] and put it wherever you feel like.
  2. Add the following to you init file:
 
-    (add-to-list 'load-path "~/.emacs.d/vendor/inform7-mode/")
-    (autoload 'inform7-mode "inform7-mode"   "Major mode for editing inform 7 story files." t)
-    (add-to-list 'auto-mode-alist '("\\.ni" . inform7-mode))
+```elisp
+(add-to-list 'load-path "~/.emacs.d/vendor/inform7-mode/")
+(autoload 'inform7-mode "inform7-mode"   "Major mode for editing inform 7 story files." t)
+(add-to-list 'auto-mode-alist '("\\.ni" . inform7-mode))
+```
  3. Profit!
 
 [i7]:http://inform7.com/
