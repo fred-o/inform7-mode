@@ -10,7 +10,6 @@ development.
  1. Clone this repo into `~/.emacs.d/vendor/`, or download
  [inform7-mode.el] and put it wherever you feel like.
  2. Add the following to you init file:
-
 ```elisp
 (add-to-list 'load-path "~/.emacs.d/vendor/inform7-mode/")
 (autoload 'inform7-mode "inform7-mode"   "Major mode for editing inform 7 story files." t)
