@@ -1,3 +1,12 @@
+;;; inform7-mode.el --- A major mode for editiing Inform 7 source files
+;;
+;; Copyright (C) 2013 Fredrik Appelberg
+;; 
+;; Author: Fredrik Appelberg
+;; Version: 0.2
+;; Package-Requires: ((sws-mode "20120730"))
+;; Keywords: inform, inform7, interactive fiction
+
 (require 'sws-mode)
 
 (defface inform7-heading-face
@@ -29,6 +38,7 @@
     )
   "Highlighting expressions for inform7-mode")
 
+;;; ###autoload
 (define-derived-mode inform7-mode sws-mode "Inform7"
   "Major mode for editing inform 7 story files."
   (visual-line-mode)
