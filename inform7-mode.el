@@ -38,7 +38,7 @@
     )
   "Highlighting expressions for inform7-mode")
 
-;;; ###autoload
+;;;###autoload
 (define-derived-mode inform7-mode sws-mode "Inform7"
   "Major mode for editing inform 7 story files."
   (visual-line-mode)
@@ -46,5 +46,7 @@
 
 (modify-syntax-entry ?\[ "<]" inform7-mode-syntax-table)
 (modify-syntax-entry ?\] ">[" inform7-mode-syntax-table)
+
+(add-to-list 'auto-mode-alist '("\\.ni" . inform7-mode))
 
 (provide 'inform7-mode)
