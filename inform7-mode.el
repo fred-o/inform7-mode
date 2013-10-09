@@ -4,7 +4,7 @@
 ;; 
 ;; Author: Fredrik Appelberg
 ;; Version: 0.2
-;; Package-Requires: ((sws-mode "20120730"))
+;; Package-Requires: ((sws-mode "20120730.2122"))
 ;; Keywords: inform, inform7, interactive fiction
 
 (require 'sws-mode)
