@@ -1,11 +1,19 @@
-;;; inform7-mode.el --- A major mode for editiing Inform 7 source files
+;;; inform7-mode.el --- Major mode for editing Inform 7 source files
 ;;
 ;; Copyright (C) 2013 Fredrik Appelberg
 ;; 
 ;; Author: Fredrik Appelberg
 ;; Version: 0.2
-;; Package-Requires: ((sws-mode "20120730.2122"))
+;; Package-Requires: ((sws-mode "0.1"))
 ;; Keywords: inform, inform7, interactive fiction
+
+;;; Commentary:
+
+;; A basic major mode for editing Inform 7 story files. It handles highlighting
+;; and indentation, but nothing else at the moment. So you'll still need the full
+;; Inform IDE for actual development.
+
+;;; Code:
 
 (require 'sws-mode)
 
@@ -47,6 +55,8 @@
 (modify-syntax-entry ?\[ "<]" inform7-mode-syntax-table)
 (modify-syntax-entry ?\] ">[" inform7-mode-syntax-table)
 
-(add-to-list 'auto-mode-alist '("\\.ni" . inform7-mode))
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.ni\\'" . inform7-mode))
 
 (provide 'inform7-mode)
+;;; inform7-mode.el ends here
