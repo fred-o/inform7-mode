@@ -14,7 +14,7 @@ Inform7-mode is based on [sws-mode][jade-mode], which is part of [jade-mode].
 ### Package install
 
 Inform7-mode is available on [MELPA][melpa], and can be installed by
-doing `M-x list-packages`, or by eval'ing `(install-package 'inform7-mode)`.
+doing `M-x list-packages`, or by eval'ing `(package-install 'inform7-mode)`.
 
 ### Manual 
 
