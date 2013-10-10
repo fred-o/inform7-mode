@@ -11,6 +11,13 @@ Inform7-mode is based on [sws-mode][jade-mode], which is part of [jade-mode].
 
 ## Installation
 
+### Package install
+
+Inform7-mode is available on [MELPA][melpa], and can be installed by
+doing `M-x list-packages`, or by eval'ing `(install-package 'inform7-mode)`.
+
+### Manual 
+
  1. Install [jade-mode] as directed on the [project page][jade-mode]
  2. Clone `git://github.com/fred-o/inform7-mode.git` into `~/.emacs.d/vendor/`
  3. Add the following to you init file:
@@ -24,3 +31,4 @@ Inform7-mode is based on [sws-mode][jade-mode], which is part of [jade-mode].
 [i7]:http://inform7.com/
 [inform7-mode.el]:https://github.com/fred-o/inform7-mode/raw/master/inform7-mode.el
 [jade-mode]:https://github.com/brianc/jade-mode
+[melpa]:http://melpa.milkbox.net/
