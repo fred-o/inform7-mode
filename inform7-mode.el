@@ -56,7 +56,9 @@
 (modify-syntax-entry ?\] ">[" inform7-mode-syntax-table)
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.ni\\'" . inform7-mode))
+(progn
+  (add-to-list 'auto-mode-alist '("\\.ni\\'" . inform7-mode))
+  (add-to-list 'auto-mode-alist '("\\.i7x\\'" . inform7-mode)))
 
 (provide 'inform7-mode)
 ;;; inform7-mode.el ends here
